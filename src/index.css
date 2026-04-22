@@ -1,0 +1,138 @@
+:root {
+  /* Light mode default */
+  --bg: #f7f8ff;
+  --bg2: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --heading: #0b1220;
+
+  --card: rgba(255, 255, 255, 0.78);
+  --card2: rgba(255, 255, 255, 0.96);
+  --border: rgba(15, 23, 42, 0.12);
+  --shadow: rgba(15, 23, 42, 0.14) 0 18px 44px -26px;
+
+  --accent: #7c3aed; /* violet */
+  --accent2: #0891b2; /* cyan */
+  --accent3: #f97316; /* orange */
+
+  --radius: 14px;
+  --radius2: 18px;
+  --container: 1120px;
+
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+
+  font: 16px/1.55 var(--sans);
+  color-scheme: light dark;
+  color: var(--text);
+  background:
+    radial-gradient(900px 600px at 10% 5%, rgba(124, 58, 237, 0.18), transparent 62%),
+    radial-gradient(900px 600px at 92% 28%, rgba(8, 145, 178, 0.16), transparent 60%),
+    radial-gradient(700px 500px at 70% 0%, rgba(249, 115, 22, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* If user didn't pick a theme, respect system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #070812;
+    --bg2: #0b1020;
+    --text: #e5e7eb;
+    --muted: #a1a1aa;
+    --heading: #ffffff;
+
+    --card: rgba(255, 255, 255, 0.06);
+    --card2: rgba(255, 255, 255, 0.09);
+    --border: rgba(255, 255, 255, 0.14);
+    --shadow: rgba(0, 0, 0, 0.42) 0 18px 46px -26px;
+
+    --accent: #a78bfa;
+    --accent2: #22d3ee;
+    --accent3: #fb923c;
+
+    background:
+      radial-gradient(900px 600px at 14% 8%, rgba(167, 139, 250, 0.20), transparent 62%),
+      radial-gradient(900px 600px at 84% 36%, rgba(34, 211, 238, 0.14), transparent 60%),
+      radial-gradient(700px 500px at 70% 0%, rgba(251, 146, 60, 0.10), transparent 60%),
+      linear-gradient(180deg, var(--bg), var(--bg2));
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #070812;
+  --bg2: #0b1020;
+  --text: #e5e7eb;
+  --muted: #a1a1aa;
+  --heading: #ffffff;
+
+  --card: rgba(255, 255, 255, 0.06);
+  --card2: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.14);
+  --shadow: rgba(0, 0, 0, 0.42) 0 18px 46px -26px;
+
+  --accent: #a78bfa;
+  --accent2: #22d3ee;
+  --accent3: #fb923c;
+
+  background:
+    radial-gradient(900px 600px at 14% 8%, rgba(167, 139, 250, 0.20), transparent 62%),
+    radial-gradient(900px 600px at 84% 36%, rgba(34, 211, 238, 0.14), transparent 60%),
+    radial-gradient(700px 500px at 70% 0%, rgba(251, 146, 60, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+}
+
+:root[data-theme='light'] {
+  --bg: #f7f8ff;
+  --bg2: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --heading: #0b1220;
+
+  --card: rgba(255, 255, 255, 0.78);
+  --card2: rgba(255, 255, 255, 0.96);
+  --border: rgba(15, 23, 42, 0.12);
+  --shadow: rgba(15, 23, 42, 0.14) 0 18px 44px -26px;
+
+  --accent: #7c3aed;
+  --accent2: #0891b2;
+  --accent3: #f97316;
+
+  background:
+    radial-gradient(900px 600px at 10% 5%, rgba(124, 58, 237, 0.18), transparent 62%),
+    radial-gradient(900px 600px at 92% 28%, rgba(8, 145, 178, 0.16), transparent 60%),
+    radial-gradient(700px 500px at 70% 0%, rgba(249, 115, 22, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+}
