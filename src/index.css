@@ -1,111 +1,110 @@
 :root {
-  /* Light mode default */
-  --bg: #f7f8ff;
-  --bg2: #ffffff;
-  --text: #0f172a;
-  --muted: #475569;
-  --heading: #0b1220;
+  /* Light mode */
+  --bg: #ffffff;
+  --bg2: #f8f8f8;
+  --text: #404040;
+  --muted: #767676;
+  --heading: #1a1a1a;
 
-  --card: rgba(255, 255, 255, 0.78);
-  --card2: rgba(255, 255, 255, 0.96);
-  --border: rgba(15, 23, 42, 0.12);
-  --shadow: rgba(15, 23, 42, 0.14) 0 18px 44px -26px;
+  --card: #ffffff;
+  --card2: #f5f5f5;
+  --border: #e6e6e6;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
 
-  --accent: #7c3aed; /* violet */
-  --accent2: #0891b2; /* cyan */
-  --accent3: #f97316; /* orange */
+  --accent: #0066cc;
+  --accent2: #0052a3;
+  --accent3: #003d7a;
+  --accent-rgb: 0, 102, 204;
+  --accent2-rgb: 0, 82, 163;
+  --accent3-rgb: 0, 61, 122;
 
-  --radius: 14px;
-  --radius2: 18px;
-  --container: 1120px;
+  --radius: 8px;
+  --radius2: 12px;
+  --container: 1040px;
 
-  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  --mono: 'Menlo', 'Monaco', 'Courier New', monospace;
 
-  font: 16px/1.55 var(--sans);
+  font: 15px/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color-scheme: light dark;
   color: var(--text);
-  background:
-    radial-gradient(900px 600px at 10% 5%, rgba(124, 58, 237, 0.18), transparent 62%),
-    radial-gradient(900px 600px at 92% 28%, rgba(8, 145, 178, 0.16), transparent 60%),
-    radial-gradient(700px 500px at 70% 0%, rgba(249, 115, 22, 0.12), transparent 60%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
+  background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* If user didn't pick a theme, respect system preference */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --bg: #070812;
-    --bg2: #0b1020;
-    --text: #e5e7eb;
-    --muted: #a1a1aa;
+    --bg: #0f0f0f;
+    --bg2: #1a1a1a;
+    --text: #d0d0d0;
+    --muted: #909090;
     --heading: #ffffff;
 
-    --card: rgba(255, 255, 255, 0.06);
-    --card2: rgba(255, 255, 255, 0.09);
-    --border: rgba(255, 255, 255, 0.14);
-    --shadow: rgba(0, 0, 0, 0.42) 0 18px 46px -26px;
+    --card: #161616;
+    --card2: #202020;
+    --border: #2a2a2a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.6);
 
-    --accent: #a78bfa;
-    --accent2: #22d3ee;
-    --accent3: #fb923c;
-
-    background:
-      radial-gradient(900px 600px at 14% 8%, rgba(167, 139, 250, 0.20), transparent 62%),
-      radial-gradient(900px 600px at 84% 36%, rgba(34, 211, 238, 0.14), transparent 60%),
-      radial-gradient(700px 500px at 70% 0%, rgba(251, 146, 60, 0.10), transparent 60%),
-      linear-gradient(180deg, var(--bg), var(--bg2));
+    --accent: #4d9eff;
+    --accent2: #66b3ff;
+    --accent3: #80ccff;
+    --accent-rgb: 77, 158, 255;
+    --accent2-rgb: 102, 179, 255;
+    --accent3-rgb: 128, 204, 255;
   }
 }
 
 :root[data-theme='dark'] {
-  --bg: #070812;
-  --bg2: #0b1020;
-  --text: #e5e7eb;
-  --muted: #a1a1aa;
+  --bg: #0f0f0f;
+  --bg2: #1a1a1a;
+  --text: #d0d0d0;
+  --muted: #909090;
   --heading: #ffffff;
 
-  --card: rgba(255, 255, 255, 0.06);
-  --card2: rgba(255, 255, 255, 0.09);
-  --border: rgba(255, 255, 255, 0.14);
-  --shadow: rgba(0, 0, 0, 0.42) 0 18px 46px -26px;
+  --card: #161616;
+  --card2: #202020;
+  --border: #2a2a2a;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.6);
 
-  --accent: #a78bfa;
-  --accent2: #22d3ee;
-  --accent3: #fb923c;
-
-  background:
-    radial-gradient(900px 600px at 14% 8%, rgba(167, 139, 250, 0.20), transparent 62%),
-    radial-gradient(900px 600px at 84% 36%, rgba(34, 211, 238, 0.14), transparent 60%),
-    radial-gradient(700px 500px at 70% 0%, rgba(251, 146, 60, 0.10), transparent 60%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
+  --accent: #4d9eff;
+  --accent2: #66b3ff;
+  --accent3: #80ccff;
+  --accent-rgb: 77, 158, 255;
+  --accent2-rgb: 102, 179, 255;
+  --accent3-rgb: 128, 204, 255;
 }
 
 :root[data-theme='light'] {
-  --bg: #f7f8ff;
+  --bg: #f0f2ff;
   --bg2: #ffffff;
-  --text: #0f172a;
-  --muted: #475569;
+  --text: #1e293b;
+  --muted: #64748b;
   --heading: #0b1220;
 
-  --card: rgba(255, 255, 255, 0.78);
-  --card2: rgba(255, 255, 255, 0.96);
-  --border: rgba(15, 23, 42, 0.12);
-  --shadow: rgba(15, 23, 42, 0.14) 0 18px 44px -26px;
+  --card: rgba(255, 255, 255, 0.85);
+  --card2: rgba(255, 255, 255, 0.97);
+  --border: rgba(15, 23, 42, 0.10);
+  --shadow: 0 20px 60px -20px rgba(124, 58, 237, 0.18), 0 4px 16px -4px rgba(15,23,42,0.10);
+  --shadow-hover: 0 28px 70px -16px rgba(124, 58, 237, 0.28), 0 6px 20px -4px rgba(15,23,42,0.12);
 
   --accent: #7c3aed;
   --accent2: #0891b2;
   --accent3: #f97316;
+  --accent-rgb: 124, 58, 237;
+  --accent2-rgb: 8, 145, 178;
+  --accent3-rgb: 249, 115, 22;
 
   background:
-    radial-gradient(900px 600px at 10% 5%, rgba(124, 58, 237, 0.18), transparent 62%),
-    radial-gradient(900px 600px at 92% 28%, rgba(8, 145, 178, 0.16), transparent 60%),
-    radial-gradient(700px 500px at 70% 0%, rgba(249, 115, 22, 0.12), transparent 60%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
+    radial-gradient(ellipse 900px 600px at 8% 0%, rgba(124, 58, 237, 0.14), transparent 60%),
+    radial-gradient(ellipse 800px 500px at 95% 20%, rgba(8, 145, 178, 0.12), transparent 58%),
+    radial-gradient(ellipse 600px 400px at 60% 90%, rgba(249, 115, 22, 0.09), transparent 55%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  background-attachment: fixed;
 }
 
 *,
@@ -134,5 +133,6 @@ textarea {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--heading);
 }
